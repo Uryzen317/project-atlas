@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading</title>
+  </head>
+  <body>
+    <p style="font-size: 100px; font-weight: bold; padding: 0; margin: 0">
+      Project Atlas
+    </p>
+    <p style="padding: 0; margin: 0" id="loader"></p>
+  </body>
+
+  <script>
+    var loadingState = 0;
+
+    setInterval(() => {
+      loadingState += parseInt(Math.random() * 10);
+      if (loadingState > 100) loadingState = 100;
+
+      document.getElementById("loader").innerHTML =
+        "Now loading : " + loadingState + "%";
+    }, 100);
+  </script>
+</html>
